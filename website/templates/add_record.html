@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-6 offset-md-3">
+        <h1>Add Record</h1>
+        <br>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="">First Name:</label>
+            <input type="text" placeholder="First Name"  name="first_name"><br><br>
+            <label for="">Last Name:</label>
+            <input type="text" placeholder="Last Name" name="last_name"><br><br>
+            <label for="">Email:</label>
+            <input type="text" placeholder="Email" name="email"><br><br>
+            <label for="">Phone:</label>
+            <input type="text" placeholder="Phone" name="phone"><br><br>
+            <label for="">Address:</label>
+            <input type="text" placeholder="Address" name="address"><br><br>
+            <label for="">City:</label>
+            <input type="text" placeholder="City" name="city"><br><br>
+            <label for="">State:</label>
+            <input type="text" placeholder="State" name="state"><br><br>
+            <label for="">Zipcode:</label>
+            <input type="text" placeholder="Zipcode" name="zipcode"><br><br>
+            <button type="submit" class="btn btn-primary">Add Record</button>
+        </form>
+        <br>
+    </div>
+{% endblock %}
+    

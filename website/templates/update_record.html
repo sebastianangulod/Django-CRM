@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-6 offset-md-3">
+        <h1>Update Record</h1>
+        <br>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="">First Name:</label>
+            <input type="text" placeholder="First Name" name="first_name" value="{{record.first_name}}"><br><br>
+            <label for="">Last Name:</label>
+            <input type="text" placeholder="Last Name" name="last_name" value="{{record.last_name}}"><br><br>
+            <label for="">Email:</label>
+            <input type="text" placeholder="Email" name="email" value="{{record.email}}"><br><br>
+            <label for="">Phone:</label>
+            <input type="text" placeholder="Phone" name="phone" value="{{record.phone}}"><br><br>
+            <label for="">Address:</label>
+            <input type="text" placeholder="Address" name="address" value="{{record.address}}"><br><br>
+            <label for="">City:</label>
+            <input type="text" placeholder="City" name="city" value="{{record.city}}"><br><br>
+            <label for="">State:</label>
+            <input type="text" placeholder="State" name="state" value="{{record.state}}"><br><br>
+            <label for="">Zipcode:</label>
+            <input type="text" placeholder="Zipcode" name="zipcode" value="{{record.zipcode}}"><br><br>
+            <button type="submit" class="btn btn-primary">Update Record</button>
+        </form>
+        <br>
+    </div>
+{% endblock %}
